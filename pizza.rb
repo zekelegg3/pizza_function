@@ -21,29 +21,29 @@ def specailties
 	puts ["pulled pork", "hot peppers", "ranch", "pineaple", "anchovies"].shuffle.first
 end
 
-small = 7
-medium = 9
-large = 11
-xxl = 13
+small = 6 
+medium = 8 
+large = 10
+xxl = 12
 
 print "How many pizzas would you like?"
 x = gets.chomp.to_i
 count = 1 
 cost = 0 
-cost += 10
-	if small
-		cost += 5
-	elsif medium
-		cost += 6
-	elsif large
-		cost += 8
-	elsif xxl
-		cost += 10
-	end			
 x.times do 
 	puts "Pizza #{count}"
 	count +=1
 	puts "#{size} size\n"
+	cost += 2
+	if size == "small"
+		cost += 4
+	elsif size == "medium"
+		cost += 6
+	elsif size == "large"
+		cost += 8
+	elsif size == "xxl"
+		cost += 10
+	end			
 	puts "#{crust} crust\n"
 	puts "#{cheese} cheese\n"
 	puts "#{meats} for meat\n"
@@ -51,7 +51,5 @@ x.times do
 	puts "#{specailties} on half\n"
 	puts "#{cost} total cost\n"
 end
-
-	
 			
 				
